@@ -1,0 +1,112 @@
+# Example CV content — fictional data.
+# Copy to data-en.yaml and fill in your own:  cp data-en.example.yaml data-en.yaml
+#
+# Every section is optional — drop a key and the section disappears.
+# Section titles default to Polish; the *_title keys below switch them to English.
+
+lang: "en"
+
+name: "Jan Kowalski"
+title: "Platform Engineer"
+
+contact:
+  email: "jan.kowalski@example.com"
+  phone: "+48 600 000 000"
+  location: "Kraków, Poland"
+  website: ["example.com", "www.example.org"] # a single value or a list
+  github: "github.com/example"
+  linkedin: "linkedin.com/in/example"
+
+summary: >
+  Platform engineer experienced in building and running cloud-native
+  infrastructure. I design distributed systems: the integration layer,
+  the communication model and observability.
+
+focus:
+  - "Kubernetes"
+  - "Go"
+  - "Terraform"
+  - "PostgreSQL"
+  - "Prometheus"
+
+experience_title: "Experience"
+experience:
+  - role: "Senior Platform Engineer"
+    company: "Example S.A."
+    location: "Kraków"
+    start: "01.2021"
+    end: "present"
+    highlights:
+      - "Designed and rolled out an internal Kubernetes platform serving dozens of teams."
+      - "Automated environment provisioning (Terraform, GitOps), cutting deployment time from hours to minutes."
+      - "Built an observability stack on Prometheus and Grafana with SLO-based alerting."
+
+  - role: "DevOps Engineer"
+    company: "Example Company Ltd."
+    location: "Wrocław"
+    start: "03.2017"
+    end: "12.2020"
+    highlights:
+      - "Migrated a monolith to a containerised architecture."
+      - "Built CI/CD pipelines and introduced infrastructure as code."
+
+projects_title: "Personal Projects"
+
+projects_intro: >
+  A short line framing why these projects exist.
+
+projects:
+  - name: "Project Name"
+    link: "example.com"
+    note: >
+      Two or three sentences on what the project does and which technical
+      decisions in it are interesting. The address next to the name is a
+      clickable link in the PDF.
+
+projects_note: >
+  An optional note under the list — for instance about source code access.
+
+earlier_title: "Earlier Experience"
+earlier:
+  - role: "Systems Administrator"
+    company: "Previous Employer"
+    start: "06.2012"
+    end: "02.2017"
+    note: "Linux, networking, provisioning automation."
+
+skills_title: "Skills"
+skills:
+  - category: "Programming languages"
+    items: ["Go", "Python", "Bash"]
+  - category: "Orchestration & containers"
+    items: ["Kubernetes", "Docker", "Helm"]
+  - category: "Automation / IaC"
+    items: ["Terraform", "Ansible", "GitOps"]
+  - category: "Observability"
+    items: ["Prometheus", "Grafana", "OpenTelemetry"]
+
+certifications_title: "Certifications"
+certifications:
+  - "CKA — Certified Kubernetes Administrator"
+  - "Training name, Provider (2024)"
+
+education_title: "Education"
+education:
+  - degree: "MSc in Computer Science"
+    school: "Example University of Technology"
+    location: "Kraków"
+    start: "2007"
+    end: "2012"
+
+interests_title: "Interests"
+interests:
+  - "photography"
+  - "climbing"
+  - "non-fiction"
+
+languages_title: "Languages"
+languages:
+  - name: "Polish"
+    level: "native"
+  - name: "English"
+    level: "fluent (C1)"
