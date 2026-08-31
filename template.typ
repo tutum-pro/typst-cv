@@ -161,13 +161,22 @@
   set text(font: "IBM Plex Sans", size: 10pt, lang: data.at("lang", default: "pl"), fill: ink, hyphenate: false)
   set par(justify: false, leading: 0.6em, spacing: 0.6em)
 
+  // Numer telefonu wstrzykiwany przy kompilacji, żeby nie leżał w repozytorium:
+  //   typst compile --input phone="+48 ..." cv.typ cv.pdf
+  // Bez tego w dokumencie zostaje zamaskowana wartość z pliku danych.
+  let contact = data.contact
+  let phone-override = sys.inputs.at("phone", default: "")
+  if phone-override.trim() != "" {
+    contact.insert("phone", phone-override.trim())
+  }
+
   // --- Nagłówek: imię, tytuł, kontakt ---
   block(below: 0.55em)[
     #text(size: 26pt, weight: "light", fill: luma(20))[#data.name]
     #v(-0.5em)
     #text(size: 11.5pt, weight: "medium", fill: accent, tracking: 0.02em)[#data.title]
   ]
-  block(below: 0.5em)[#contact-line(data.contact)]
+  block(below: 0.5em)[#contact-line(contact)]
   line(length: 100%, stroke: 0.8pt + accent)
 
   // --- Podsumowanie ---

@@ -1,0 +1,205 @@
+lang: "en"
+
+name: "Robert Sternal"
+title: "Platform Architect & Engineer"
+
+contact:
+  email: "pl.robert.sternal@gmail.com"
+  phone: "+48 660 ••• •••"
+  location: "Poznań / Warsaw, Poland"
+  website: ["tutum-pro.io", "www.ratovia.com"]
+  github: "github.com/tutum-pro"
+  # linkedin: "linkedin.com/in/..."   # ← fill in or leave commented out
+
+summary: >
+  Architect and platform engineer with over 25 years of experience — from Linux/AIX
+  systems administration, through enterprise integration (SOA, ESB, EIP patterns),
+  to building cloud-native platforms on Kubernetes. I design distributed systems:
+  the integration layer, the communication model and observability. I have run an
+  R&D department and engineering teams. Focused on deterministic, well-documented
+  architectures.
+
+focus:
+  - "Kubernetes"
+  - "AWS EKS"
+  - "Go"
+  - "Python"
+  - "Java / Spring"
+  - "Ansible"
+  - "GitOps"
+  - "Debezium (CDC)"
+  - "PostgreSQL"
+  - "Prometheus / Grafana"
+
+experience_title: "Experience"
+experience:
+  - role: "Platform Architect & Engineer"
+    company: "Asseco Data Systems S.A."
+    location: "Warsaw"
+    start: "08.2020"
+    end: "present"
+    highlights:
+      - "Design and development of a cloud-native platform on AWS/EKS following GitOps, with automation built on Ansible, Ansible Tower and Python."
+      - "Building the orchestration and containerisation layer: Kubernetes, Docker, Helm, OpenShift, RKE2, kube-spray, microk8s, Harbor."
+      - "Microservice architecture and REST/gRPC APIs (Go, Python, Java, OpenAPI) together with the security layer: TLS, JWT, OAuth2, RBAC."
+      - "Data integration and CDC/ETL pipelines (Debezium, Airflow, PostgreSQL, MongoDB) plus observability based on Prometheus, OpenTelemetry and Grafana."
+      - "Technical oversight of development teams, documenting architecture and processes (BPMN 2.0, UML, PlantUML), and support for recruitment and client relations."
+
+  - role: "Technical Lead"
+    company: "Altavia Adware Sp. z o.o."
+    location: "Poznań"
+    start: "04.2020"
+    end: "06.2020"
+    highlights:
+      - "Software design and development; leading the delivery team."
+
+  - role: "Solution Architect"
+    company: "Applica AI"
+    location: "Warsaw"
+    start: "04.2019"
+    end: "03.2020"
+    highlights:
+      - "Designed the architecture of an NLP system following microservice architecture principles."
+      - "Defined the communication and messaging model for a distributed environment."
+      - "Managed engineering teams."
+
+  - role: "R&D Director, IT Architect"
+    company: "QSG S.A."
+    location: "Poznań"
+    start: "08.2015"
+    end: "03.2019"
+    highlights:
+      - "Led the R&D department: strategic plans and objectives, team management, recruitment and staff development."
+      - "Established organisation-wide application development principles and infrastructure requirements."
+      - "High-level application design: application layers, Common Data Model, integration layer (protocol adapters, connectors, EIP patterns)."
+      - "Defined the communication model between system components, including microservice architecture."
+
+  - role: "Senior Java/ESB Developer"
+    company: "PayU S.A."
+    location: "Poznań"
+    start: "04.2012"
+    end: "06.2015"
+    highlights:
+      - "Design and development of SOA processes in TIBCO (Designer, BusinessWorks, EMS) and Mule ESB."
+      - "Built enterprise-class applications: Spring, Spring Boot, JPA/Hibernate, JMS, JBoss."
+      - "Design and development of PostgreSQL databases."
+
+projects_title: "Personal Projects"
+
+projects_intro: >
+  A proving ground for validating architectural concepts in working code —
+  from the domain model and integration layer through to deployment on Kubernetes.
+
+projects:
+  - name: "Tutum Platform"
+    link: "tutum-pro.io"
+    note: >
+      An X.509 certificate distribution platform for Kubernetes and Docker — mTLS,
+      AES-256-GCM encryption, automatic validity checking, CLI tooling. Around
+      12k lines of code; public technical documentation, dual licence.
+
+  - name: "L2A / Applio — leasing application platform"
+    link: "www.ratovia.com"
+    note: >
+      Live demo. Five Go microservices built around a custom formula engine: a DSL,
+      a bytecode compiler, a stack machine and a persistent cache of compiled
+      programs. Content-addressed product versioning (sha256), lifecycle FSMs for
+      applications and contracts, BPMN coordinator. Angular front end, deployed on
+      Kubernetes.
+
+  - name: "archirules"
+    link: "github.com/tutum-pro/archirules"
+    note: >
+      An open method for documenting architectural decisions — registers of ADRs,
+      open questions and project phases, with automated consistency checking.
+      Licensed CC BY-SA 4.0.
+
+projects_note: >
+  Source code access is restricted. For recruitment purposes I can grant access
+  on request and walk through the solutions in practice.
+
+earlier_title: "Earlier Experience"
+earlier:
+  - role: "Software Engineer"
+    company: "Sygnity S.A."
+    start: "06.2011"
+    end: "03.2012"
+    note: "JEE (Struts, JSP, EJB, JPA); C++/Oracle Tuxedo."
+
+  - role: "Senior Developer"
+    company: "Projekty Bankowe Polsoft"
+    start: "05.2010"
+    end: "12.2011"
+    note: "JEE (Struts, JSP, EJB, JPA); C++/Oracle Tuxedo."
+
+  - role: "Systems Engineer"
+    company: "Winuel S.A."
+    start: "04.2005"
+    end: "04.2010"
+    note: "IBM Tivoli Netcool; Java (Swing, SWT, Servlet, JSP, JSF, EJB, JPA), Python; PostgreSQL; RedHat Linux 5/6."
+
+  - role: "Systems Engineer"
+    company: "Bank Zachodni WBK S.A."
+    start: "04.1999"
+    end: "04.2003"
+    note: "ZORBA 2000 core banking system; IBM AIX 5; LAN networks."
+
+  - role: "Technician"
+    company: "Adam Mickiewicz University"
+    start: "11.1995"
+    end: "03.1999"
+    note: "Maintenance of Linux servers (SMTP, FTP, Apache)."
+
+skills_title: "Skills"
+skills:
+  - category: "Programming languages"
+    items: ["Go", "Python", "Java / Spring / J2EE", "C/C++", "Bash"]
+  - category: "Orchestration & containers"
+    items: ["Kubernetes", "Docker", "Helm", "AWS EKS", "OpenShift", "RKE2", "Harbor"]
+  - category: "Automation / IaC"
+    items: ["Ansible", "Ansible Tower", "GitOps", "CI/CD"]
+  - category: "Data, integration, ETL & CDC"
+    items: ["Debezium (CDC)", "Airflow", "Camunda", "PostgreSQL", "Oracle", "MongoDB"]
+  - category: "Observability"
+    items: ["Prometheus", "OpenTelemetry", "Grafana", "distributed tracing"]
+  - category: "Systems"
+    items: ["Linux/Unix", "networking", "POSIX", "NFS"]
+  - category: "Security"
+    items: ["TLS", "JWT", "OAuth2", "RBAC"]
+  - category: "Architecture & modelling"
+    items: ["microservice architecture", "EIP patterns", "design patterns", "OpenAPI", "gRPC", "BPMN 2.0", "UML / PlantUML"]
+
+certifications_title: "Certifications & Training"
+certifications:
+  - "RHCSA — Red Hat Enterprise Linux 6"
+  - "IBM Tivoli Netcool Impact 4.0 — advanced administration and deployment"
+  - "EDA — Event Driven Architecture, NobelProg (2016)"
+  - "Domain Driven Design, Bottega IT Solutions (2016)"
+
+education_title: "Education"
+education:
+  - degree: "Physics and Computer Science (no degree awarded)"
+    school: "Adam Mickiewicz University"
+    location: "Poznań"
+    start: "1995"
+    end: "1999"
+
+  - degree: "Chemical Technician"
+    school: "Hanka Sawicka Technical Secondary School"
+    location: "Poznań"
+    start: "1986"
+    end: "1991"
+
+interests_title: "Interests"
+interests:
+  - "classical music and jazz"
+  - "amateur piano"
+  - "emerging technologies"
+  - "mathematics, physics, chemistry"
+
+languages_title: "Languages"
+languages:
+  - name: "Polish"
+    level: "native"
+  - name: "English"
+    level: "intermediate (B2)"

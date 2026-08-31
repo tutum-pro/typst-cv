@@ -36,8 +36,10 @@ cv/
 ├── cv.typ                 # punkt wejścia (PL): ładuje dane i renderuje
 ├── cv-en.typ              # punkt wejścia (EN) — ten sam motyw, inna treść
 ├── template.typ           # cała logika składu i stylu (motyw)
-├── data.example.yaml      # przykładowa TREŚĆ po polsku
-├── data-en.example.yaml   # przykładowa TREŚĆ po angielsku
+├── data.yaml              # TREŚĆ po polsku — to edytujesz na co dzień
+├── data-en.yaml           # TREŚĆ po angielsku
+├── data.example.yaml      # pusty punkt wyjścia (dane fikcyjne)
+├── data-en.example.yaml   # to samo po angielsku
 ├── fonts/                 # zawendorowane IBM Plex — build deterministyczny
 ├── justfile               # recepty build / watch / clean
 └── .gitignore
@@ -56,9 +58,11 @@ Fontów nie musisz instalować — leżą w `fonts/`.
 
 ## Start
 
+`data.yaml` i `data-en.yaml` zawierają treść tego konkretnego CV — możesz je
+edytować wprost albo zacząć od czystej kartki:
+
 ```bash
-cp data.example.yaml    data.yaml      # wersja polska
-cp data-en.example.yaml data-en.yaml   # wersja angielska (opcjonalnie)
+cp data.example.yaml data.yaml   # opcjonalnie: start od danych fikcyjnych
 
 just build      # obie wersje: cv.pdf + cv-en.pdf
 just build-pl   # tylko polska
@@ -74,8 +78,25 @@ typst compile --font-path fonts cv.typ    cv.pdf
 typst compile --font-path fonts cv-en.typ cv-en.pdf
 ```
 
-Pliki `data.yaml` i `data-en.yaml` są w `.gitignore` — to Twoje dane osobowe
-i nie powinny trafić do repozytorium.
+### Numer telefonu
+
+Numer telefonu nie leży w repozytorium — w plikach danych jest wartość
+zamaskowana. Prawdziwy podajesz przy kompilacji, przez zmienną środowiskową:
+
+```bash
+CV_PHONE="+48 600 000 000" just build
+```
+
+albo wprost, bez `just`:
+
+```bash
+typst compile --font-path fonts --input phone="+48 600 000 000" cv.typ cv.pdf
+```
+
+Bez tej zmiennej dokument zbuduje się z zamaskowanym numerem — co jest widoczne
+gołym okiem, więc nie ma jak przypadkiem wysłać takiego PDF-a rekruterowi.
+Ten sam mechanizm działa dla dowolnego innego pola, które wolisz trzymać poza
+repozytorium.
 
 ## Dostosowanie
 
@@ -95,6 +116,8 @@ i nie powinny trafić do repozytorium.
   `education_title`, `interests_title`, `languages_title`, plus `lang`
   (`"pl"` / `"en"`). Tak właśnie powstaje wariant angielski — bez kopiowania
   szablonu.
+- **Dane wstrzykiwane przy kompilacji** — `sys.inputs` w `template.typ`; tak
+  obsłużony jest numer telefonu (patrz wyżej).
 - **Kolor akcentu** — `accent` na górze `template.typ`.
 - **Fonty** — podmień pliki w `fonts/` i nazwy rodzin w `template.typ`
   (`"IBM Plex Sans"`).

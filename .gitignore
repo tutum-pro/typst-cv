@@ -1,7 +1,3 @@
-# Dane osobowe — każdy trzyma własne lokalnie (patrz data.example.yaml)
-data.yaml
-data-en.yaml
-
 # PDF-y: zbudowane artefakty są regenerowalne ze źródeł, a dokumenty
 # osobiste nie mają czego szukać w repozytorium
 *.pdf
