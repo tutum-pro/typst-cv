@@ -1,0 +1,105 @@
+# Przykładowa treść CV — dane fikcyjne.
+# Skopiuj do data.yaml i wypełnij swoimi:  cp data.example.yaml data.yaml
+#
+# Wszystkie sekcje są opcjonalne — pomiń klucz, a sekcja zniknie z dokumentu.
+
+name: "Jan Kowalski"
+title: "Inżynier Platformowy"
+
+contact:
+  email: "jan.kowalski@example.com"
+  phone: "+48 600 000 000"
+  location: "Kraków, Polska"
+  website: ["example.com", "www.example.org"] # pojedyncza wartość albo lista
+  github: "github.com/przyklad"
+  linkedin: "linkedin.com/in/przyklad"
+
+summary: >
+  Inżynier platformowy z doświadczeniem w budowie i utrzymaniu infrastruktury
+  cloud-native. Projektuję systemy rozproszone: warstwę integracji, model
+  komunikacji i obserwowalność.
+
+# Pasek kluczowych technologii pod podsumowaniem
+focus:
+  - "Kubernetes"
+  - "Go"
+  - "Terraform"
+  - "PostgreSQL"
+  - "Prometheus"
+
+# Role opisane szczegółowo — zwykle ostatnie 10–15 lat
+experience:
+  - role: "Senior Platform Engineer"
+    company: "Przykład S.A."
+    location: "Kraków"
+    start: "01.2021"
+    end: "obecnie"
+    highlights:
+      - "Zaprojektowanie i wdrożenie wewnętrznej platformy na Kubernetes obsługującej kilkadziesiąt zespołów."
+      - "Automatyzacja provisioningu środowisk (Terraform, GitOps); skrócenie czasu wdrożenia z godzin do minut."
+      - "Stos obserwowalności oparty o Prometheus i Grafanę, z alertowaniem na bazie SLO."
+
+  - role: "DevOps Engineer"
+    company: "Firma Przykładowa Sp. z o.o."
+    location: "Wrocław"
+    start: "03.2017"
+    end: "12.2020"
+    highlights:
+      - "Migracja monolitu na architekturę konteneryzowaną."
+      - "Budowa pipeline'ów CI/CD i wprowadzenie infrastruktury jako kodu."
+
+# Sekcja projektów — nazwa, klikalny adres, krótki opis
+projects_intro: >
+  Krótkie zdanie ramujące, po co te projekty powstały.
+
+projects:
+  - name: "Nazwa Projektu"
+    link: "example.com"
+    note: >
+      Dwa–trzy zdania o tym, co projekt robi i jakie decyzje techniczne są
+      w nim ciekawe. Adres obok nazwy jest klikalny w PDF-ie.
+
+projects_note: >
+  Opcjonalna notka pod listą — np. informacja o dostępie do kodu źródłowego.
+
+# Starsze role — jedna linia na wpis, bez wypunktowań
+earlier:
+  - role: "Administrator systemów"
+    company: "Wcześniejszy Pracodawca"
+    start: "06.2012"
+    end: "02.2017"
+    note: "Linux, sieci, automatyzacja provisioningu."
+
+skills:
+  - category: "Języki programowania"
+    items: ["Go", "Python", "Bash"]
+  - category: "Orkiestracja i konteneryzacja"
+    items: ["Kubernetes", "Docker", "Helm"]
+  - category: "Automatyzacja / IaC"
+    items: ["Terraform", "Ansible", "GitOps"]
+  - category: "Obserwowalność"
+    items: ["Prometheus", "Grafana", "OpenTelemetry"]
+
+# Tytuł tej sekcji można nadpisać, np. na "Certyfikaty i szkolenia"
+certifications_title: "Certyfikaty"
+certifications:
+  - "CKA — Certified Kubernetes Administrator"
+  - "Nazwa szkolenia, Organizator (2024)"
+
+education:
+  - degree: "Informatyka, studia magisterskie"
+    school: "Przykładowa Politechnika"
+    location: "Kraków"
+    start: "2007"
+    end: "2012"
+
+interests:
+  - "fotografia"
+  - "wspinaczka"
+  - "literatura faktu"
+
+languages:
+  - name: "Polski"
+    level: "ojczysty"
+  - name: "Angielski"
+    level: "biegły (C1)"
