@@ -201,7 +201,9 @@
       radius: 2pt,
       {
         set text(size: 9.3pt, fill: luma(45))
-        focus.join(text(fill: accent)[ \u{2002}·\u{2002} ])
+        // spacje wewnątrz pozycji na niełamiące — element nigdy nie pęknie
+        // na końcu wiersza ("Debezium (CDC)", "Java / Spring")
+        focus.map(i => i.replace(" ", "\u{00A0}")).join(text(fill: accent)[ \u{2002}·\u{2002} ])
       },
     )
   }

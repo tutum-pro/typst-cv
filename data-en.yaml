@@ -9,14 +9,14 @@ contact:
   location: "Poznań / Warsaw, Poland"
   website: ["tutum-pro.io", "www.ratovia.com"]
   github: "github.com/tutum-pro"
-  # linkedin: "linkedin.com/in/..."   # ← fill in or leave commented out
+  linkedin: "www.linkedin.com/in/robert-sternal-23050660/"
 
 summary: >
   Architect and platform engineer with over 25 years of experience — from Linux/AIX
   systems administration, through enterprise integration (SOA, ESB, EIP patterns),
   to building cloud-native platforms on Kubernetes. I design distributed systems:
-  the integration layer, the communication model and observability. I have run an
-  R&D department and engineering teams. Focused on deterministic, well-documented
+  the integration layer, asynchronous messaging built on brokers, and observability.
+  I have run an R&D department and engineering teams. Focused on deterministic, well-documented
   architectures.
 
 focus:
@@ -27,6 +27,7 @@ focus:
   - "Java / Spring"
   - "Ansible"
   - "GitOps"
+  - "RabbitMQ"
   - "Debezium (CDC)"
   - "PostgreSQL"
   - "Prometheus / Grafana"
@@ -41,7 +42,8 @@ experience:
     highlights:
       - "Design and development of a cloud-native platform on AWS/EKS following GitOps, with automation built on Ansible, Ansible Tower and Python."
       - "Building the orchestration and containerisation layer: Kubernetes, Docker, Helm, OpenShift, RKE2, kube-spray, microk8s, Harbor."
-      - "Microservice architecture and REST/gRPC APIs (Go, Python, Java, OpenAPI) together with the security layer: TLS, JWT, OAuth2, RBAC."
+      - "Microservice architecture: REST/gRPC APIs (Go, Python, Java, OpenAPI) and asynchronous messaging on RabbitMQ/AMQP and Artemis/JMS."
+      - "Security layer: TLS, JWT, OAuth2, RBAC."
       - "Data integration and CDC/ETL pipelines (Debezium, Airflow, PostgreSQL, MongoDB) plus observability based on Prometheus, OpenTelemetry and Grafana."
       - "Technical oversight of development teams, documenting architecture and processes (BPMN 2.0, UML, PlantUML), and support for recruitment and client relations."
 
@@ -60,7 +62,7 @@ experience:
     end: "03.2020"
     highlights:
       - "Designed the architecture of an NLP system following microservice architecture principles."
-      - "Defined the communication and messaging model for a distributed environment."
+      - "Defined the communication and messaging model for a distributed environment (RabbitMQ/AMQP)."
       - "Managed engineering teams."
 
   - role: "R&D Director, IT Architect"
@@ -72,7 +74,7 @@ experience:
       - "Led the R&D department: strategic plans and objectives, team management, recruitment and staff development."
       - "Established organisation-wide application development principles and infrastructure requirements."
       - "High-level application design: application layers, Common Data Model, integration layer (protocol adapters, connectors, EIP patterns)."
-      - "Defined the communication model between system components, including microservice architecture."
+      - "Defined the communication model between system components — asynchronous, broker-based (Artemis/JMS, RabbitMQ/AMQP), in a microservice architecture."
 
   - role: "Senior Java/ESB Developer"
     company: "PayU S.A."
@@ -160,6 +162,8 @@ skills:
     items: ["Ansible", "Ansible Tower", "GitOps", "CI/CD"]
   - category: "Data, integration, ETL & CDC"
     items: ["Debezium (CDC)", "Airflow", "Camunda", "PostgreSQL", "Oracle", "MongoDB"]
+  - category: "Messaging & queues"
+    items: ["RabbitMQ / AMQP", "ActiveMQ Artemis / JMS", "TIBCO EMS"]
   - category: "Observability"
     items: ["Prometheus", "OpenTelemetry", "Grafana", "distributed tracing"]
   - category: "Systems"
